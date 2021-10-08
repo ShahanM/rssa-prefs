@@ -1,0 +1,17 @@
+{
+  "name": "aws-python-flask-api",
+  "version": "1.0.0",
+  "description": "Example of a Python Flask API service with traditional Serverless Framework",
+  "author": "",
+  "devDependencies": {
+    "serverless-localstack": "^0.4.32",
+    "serverless-python-requirements": "^5.1.0",
+    "serverless-wsgi": "^1.7.6"
+  },
+  "scripts": {
+    "build": "serverless webpack --stage local",
+    "deploy": "serverless deploy --stage local",
+    "watch": "nodemon -w src -e '.*' -x 'npm run build'",
+    "start": "npm run deploy && npm run watch"
+  }
+}

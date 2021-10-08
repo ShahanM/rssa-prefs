@@ -1,0 +1,37 @@
+<!-- Progress Bar -->
+<div class="bg-light" style="height: 30px" #full>
+    <div id="progress" class="h-100 d-flex align-items-end">
+        <div class="bg-warning font-weight-bold rounded-right" style="height: 10px"
+             [ngStyle]="{'width.%': (state.state - 1)*20 + 9}" #bar></div>
+    </div>
+    <!-- Numbers -->
+    <div style="top: 0" class="position-absolute w-100">
+        <div class="d-inline-block font-weight-bold"
+             *ngFor="let i of [1,2,3, 4, 5]"
+             [ngStyle]="{'margin-left.%': i > 1 ? 20 : 2}">
+            <h1 class="bi bi-circle-fill position-absolute"
+                [ngClass]="['text-light']"
+                style="top:0"></h1>
+            <h5 class="position-absolute text-muted" style="top: 12px; margin-left: 16px">{{i}}</h5>
+        </div>
+    </div>
+</div>
+
+<!-- Title -->
+<div style="height: 200px" class="bg-light w-100 pt-lg-5 pt-6 pb-7">
+    <div class="ml-lg-6 ml-3" *ngIf="state.state <= steps.length">
+        <h1 id="page-title" class="text-dark font-weight-bold display-3 mb-n1">{{steps[state.state - 1].title}}</h1>
+        <h4 id="page-subtitle" [innerHTML]="steps[state.state - 1].subtitle"></h4>
+    </div>
+</div>
+
+<!-- Content -->
+<main class="pb-7" [ngSwitch]="state.state">
+    <!-- Switch page based on state -->
+    <rssa-welcome *ngSwitchCase="1"></rssa-welcome>
+    <rssa-steps *ngSwitchCase="2"></rssa-steps>
+    <rssa-choose *ngSwitchCase="3"></rssa-choose>
+    <rssa-browse *ngSwitchCase="4"></rssa-browse>
+    <rssa-survey *ngSwitchCase="5"></rssa-survey>
+</main>
+

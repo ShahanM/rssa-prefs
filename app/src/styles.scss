@@ -1,0 +1,11 @@
+@use "styles/cards";
+@use "styles/experimental";
+@use "styles/fonts";
+@use "styles/animation";
+@use "styles/utils";
+@use "styles/fixes";
+@use "styles/forms";
+
+.modal-content {
+  background-color: transparent !important
+}

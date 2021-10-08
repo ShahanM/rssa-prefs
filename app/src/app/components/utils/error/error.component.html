@@ -1,0 +1,18 @@
+<ng-template #errorBox>
+    <div class="card bg-warning w-100" style="padding: 10px !important">
+        <div class="card-body w-100">
+            <h3 class="card-title">
+                <i class="bi bi-exclamation-triangle mr-2"></i>
+                Sorry, there's been an error!</h3>
+            <p>This is not your fault. Please do not continue and contact
+                <a class="font-weight-bold">bartk@clemson.edu</a>
+                immediately. Your efforts will be compensated.</p>
+            <h6 class="text-dark" (click)="error.show = !error.show">
+                <span *ngIf="error.show">Hide details</span>
+                <span *ngIf="!error.show">Show details</span>
+            </h6>
+            <p class="text-dark" *ngIf="error.show">{{error.message}}</p>
+        </div>
+    </div>
+</ng-template>
+

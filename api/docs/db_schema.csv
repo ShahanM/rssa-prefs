@@ -1,0 +1,7 @@
+attribute, type, description
+user_id, string, id of the user (primary key)
+ratings, list, user ratings for items
+pred_preferences, list, predicted preferences
+actual_preferences, list, actual preferences
+events, list, user interactions
+survey, list, survey results

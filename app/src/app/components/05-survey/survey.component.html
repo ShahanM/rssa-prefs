@@ -1,0 +1,33 @@
+<div class="row no-gutters justify-content-center">
+    <div class="col-8 mt-5">
+
+        <!-- Message -->
+        <p class="font-weight-bold">
+            Please take a few minutes to answer some questions about your experience. You will receive your
+            mturk code upon submission. Thank you for your participation.
+        </p>
+
+        <!-- Survey -->
+        <h2 class="font-weight-bold mb-3">{{currentGroupName}}</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-100">
+            <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+            <button *ngIf="this.currentGroupIndex != getGroups().length - 1; else submit" type="button"
+                    [disabled]="!pageIsComplete()"
+                    (click)="this.currentGroupName = getGroups()[++this.currentGroupIndex]"
+                    class="btn btn-primary">Next
+            </button>
+            <ng-template #submit>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </ng-template>
+            <h6 class="text-danger mt-2 font-weight-bold" *ngIf="form.error">{{form.error}}</h6>
+        </form>
+
+        <!-- Mturk Code -->
+        <div class="card bg-light mt-5 bg-light" *ngIf="this.mturkCode">
+            <label>MKTurk Code</label>
+            <input type="text" class="form-control bg-white" style="color: black !important" disabled
+                   value="{{this.mturkCode}}">
+        </div>
+
+    </div>
+</div>

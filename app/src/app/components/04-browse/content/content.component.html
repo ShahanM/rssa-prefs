@@ -1,0 +1,52 @@
+<div class="bg-dark">
+
+    <div class="h-100 text-white">
+
+        <!-- Navbar -->
+        <div class="w-100 d-flex flex-row justify-content-between text-light py-3">
+            <div class="ml-4"
+                 [ngbTooltip]="timeLeft > 0 ? 'Please use the system for ' +
+                  timeFormatter(timeLeft) + ' seconds': null"
+                 placement="right">
+                <!-- Exit Button -->
+                <button
+                        [disabled]="timeLeft > 0"
+                        class="btn btn-warning d-block"
+                        (click)="state.state = 5" routerLink="/">
+                    Exit
+                </button>
+                <small class="text-muted"></small>
+            </div>
+            <div class="mr-4">
+                <!--                todo dynamic *waiting-->
+                <h2 class="d-inline">Aru</h2>
+                <h2 class="ml-3 bi bi-person d-inline"></h2>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters min-vh-100">
+
+            <!-- Sidebar -->
+            <div class="col-2">
+                <div class="card bg-light-gray rounded-0 mb-1" style="padding: 0">
+                    <h4 class="card-title d-inline-block ml-3 my-n1">
+                        <i class="bi bi-house-fill"></i>
+                        Home
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-10 pl-3 bg-light-gray">
+                <h1 class="pl-5 mb-4 mt-5 font-weight-bold">Browse</h1>
+                <div class="pl-5 pr-6" *ngIf="items">
+                    <rssa-content-area [contents]="items"></rssa-content-area>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

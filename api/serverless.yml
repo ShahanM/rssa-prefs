@@ -1,0 +1,45 @@
+org: arupy
+app: rssa
+service: server
+
+frameworkVersion: '2'
+
+custom:
+  wsgi:
+    app: src/app
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: production
+  lambdaHashingVersion: '20201221'
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action: '*'
+      Resource: '*'
+
+functions:
+  api:
+    handler: wsgi_handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+
+package:
+  exclude:
+    - node_modules/**
+    - .venv/**
+    - .etc/**
+    - tests/**
+    - data/**
+    - docs/**

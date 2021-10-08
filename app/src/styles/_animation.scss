@@ -1,0 +1,36 @@
+
+// makes things spin
+.spinner {
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  animation: spin 1s ease-in-out infinite;
+}
+
+// for smooth layout switches
+* {
+  transition: max-width .8s ease-out, width .5s ease-in-out;
+}
+
+// cards grow on hover
+.card {
+  transition: transform .2s;
+  transition-timing-function: ease-in;
+  &:hover {
+    transform: scale(1.005);
+  }
+  a.card:hover {
+    text-decoration: none;
+  }
+}
+
+
+.card, button {
+  transition: opacity .8s ease-out, width .5s ease-in-out
+}
+
+.shrunk {
+  transform: scale(.9);
+}
+

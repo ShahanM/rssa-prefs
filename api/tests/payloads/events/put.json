@@ -1,0 +1,152 @@
+{
+  "user_id": "jack",
+  "events": [
+    {
+      "item_id": "112641",
+      "event_type": "hover",
+      "enter_time": 2277,
+      "exit_time": 2900,
+      "duration": 623
+    },
+    {
+      "item_id": "112760",
+      "event_type": "hover",
+      "enter_time": 2963,
+      "exit_time": 3482,
+      "duration": 519
+    },
+    {
+      "item_id": "113987",
+      "event_type": "hover",
+      "enter_time": 3516,
+      "exit_time": 5204,
+      "duration": 1688
+    },
+    {
+      "item_id": "114709",
+      "event_type": "hover",
+      "enter_time": 5204,
+      "exit_time": 5849,
+      "duration": 645
+    },
+    {
+      "item_id": "113497",
+      "event_type": "hover",
+      "enter_time": 5884,
+      "exit_time": 6346,
+      "duration": 462
+    },
+    {
+      "item_id": "113228",
+      "event_type": "hover",
+      "enter_time": 6401,
+      "exit_time": 7018,
+      "duration": 617
+    },
+    {
+      "item_id": "114709",
+      "event_type": "hover",
+      "enter_time": 7081,
+      "exit_time": 7396,
+      "duration": 315
+    },
+    {
+      "item_id": "114709",
+      "event_type": "hover",
+      "enter_time": 9981,
+      "exit_time": 11031,
+      "duration": 1050
+    },
+    {
+      "item_id": "114576",
+      "event_type": "hover",
+      "enter_time": 12026,
+      "exit_time": 12179,
+      "duration": 153
+    },
+    {
+      "item_id": "110877",
+      "event_type": "hover",
+      "enter_time": 13461,
+      "exit_time": 13994,
+      "duration": 533
+    },
+    {
+      "item_id": "113189",
+      "event_type": "hover",
+      "enter_time": 39465,
+      "exit_time": 39731,
+      "duration": 266
+    },
+    {
+      "item_id": "113497",
+      "event_type": "hover",
+      "enter_time": 165609,
+      "exit_time": 165805,
+      "duration": 196
+    },
+    {
+      "item_id": "113228",
+      "event_type": "hover",
+      "enter_time": 165805,
+      "exit_time": 167032,
+      "duration": 1227
+    },
+    {
+      "item_id": "114885",
+      "event_type": "hover",
+      "enter_time": 168656,
+      "exit_time": 169126,
+      "duration": 470
+    },
+    {
+      "item_id": "113041",
+      "event_type": "hover",
+      "enter_time": 169158,
+      "exit_time": 169488,
+      "duration": 330
+    },
+    {
+      "item_id": "113277",
+      "event_type": "hover",
+      "enter_time": 169518,
+      "exit_time": 170020,
+      "duration": 502
+    },
+    {
+      "item_id": "114319",
+      "event_type": "hover",
+      "enter_time": 170662,
+      "exit_time": 170936,
+      "duration": 274
+    },
+    {
+      "item_id": "112346",
+      "event_type": "hover",
+      "enter_time": 171414,
+      "exit_time": 171618,
+      "duration": 204
+    },
+    {
+      "item_id": "112896",
+      "event_type": "hover",
+      "enter_time": 172088,
+      "exit_time": 172354,
+      "duration": 266
+    },
+    {
+      "item_id": "112281",
+      "event_type": "hover",
+      "enter_time": 172902,
+      "exit_time": 173232,
+      "duration": 330
+    },
+    {
+      "item_id": "114388",
+      "event_type": "hover",
+      "enter_time": 173750,
+      "exit_time": 174180,
+      "duration": 430
+    }
+  ]
+}

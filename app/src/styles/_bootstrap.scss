@@ -1,0 +1,47 @@
+@use '../../node_modules/bootstrap/scss/bootstrap' with (
+
+
+  // fonts
+  $enable-responsive-font-sizes: true,
+  $font-family-base: "Inter",
+
+  // spacing
+
+  $spacers: (
+    6: 6rem,
+    7: 12rem,
+    8: 20rem
+  ),
+
+
+  // containers
+
+  $container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+  ),
+
+
+  // colors
+
+  $theme-colors: (
+    "primary": #418FDE,
+    "secondary": #FF9900,
+    "dark": #1d2029,
+    "accent": #522D80,
+    "dark-gray": #1d2029,
+  )
+
+);
+
+
+// overriding bootstrap themes
+
+.rounded {
+  border-radius: .7rem;
+}
+
+
+

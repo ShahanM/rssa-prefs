@@ -1,0 +1,15 @@
+
+<rssa-tutorial></rssa-tutorial>
+
+<!-- Movies -->
+<div class="row p-5 no-gutters bg-dark">
+    <div *ngFor="let item of items" class="col-2 mb-3">
+        <rssa-choose-card [item]="item" (rating)="addRating(item.item_id, $event)"></rssa-choose-card>
+    </div>
+</div>
+
+<!-- Continue Button -->
+<div *ngIf="numItemsLeft <= 0" class="position-fixed" style="bottom:60px; right:60px; z-index: 1000">
+    <button class="btn btn-primary btn-lg" (click)="state.next()">Continue</button>
+</div>
+
